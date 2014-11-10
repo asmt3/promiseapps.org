@@ -8154,7 +8154,7 @@ img.mfp-img {
 }
 
 
-.sponsors img {height:70px}
+.sponsors img {height:60px}
 
 .sponsors > li {
   text-align: center;
@@ -8162,10 +8162,13 @@ img.mfp-img {
   padding:2.5%;
 }
 
+
+
 @media screen and (min-width: 620px) {
   .sponsors li {
     width: 45%;
   }
+  
 
 }
 
