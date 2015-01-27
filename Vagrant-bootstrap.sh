@@ -30,25 +30,22 @@ sudo apt-get -y install mysql-server-5.5
 # sudo service postfix reload
 
 # firephp
-sudo apt-get install php-pear
-sudo pear channel-discover pear.firephp.org
-sudo pear install firephp/FirePHPCore
-
-# reload apache service
-sudo service apache2 reload
+# sudo apt-get install php-pear
+# sudo pear channel-discover pear.firephp.org
+# sudo pear install firephp/FirePHPCore
 
 # export variables for any SSH sessions
 sudo cp /srv/config/setEnvVars.sh /etc/profile.d/
 source /etc/profile.d/setEnvVars.sh
 
 # create database only once
-mysql -uroot -prootpass -e "create schema if not exists voter"
+mysql -uroot -prootpass -e "create schema if not exists promise"
 
 # load schema
 # /vagrant_data/application/backend/app/Console/cake schema create -y
 
 # add test data
-mysql -uroot -prootpass --database voter < /srv/config/sql/empty.sql
+mysql -uroot -prootpass --database promise < /srv/config/sql/empty.sql
 
 # (re)load crontab
 crontab /srv/config/crons/crontab
