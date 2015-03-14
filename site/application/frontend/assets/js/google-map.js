@@ -111,7 +111,7 @@
 
 		function codeAddress() {
 		
-			var address = "Hub King's Cross, London";
+			var address = "51.508767, -0.131549";
 			geocoder.geocode( { 'address': address}, function(results, status) {
 				if (status == google.maps.GeocoderStatus.OK) {
 					map.setCenter(results[0].geometry.location);
